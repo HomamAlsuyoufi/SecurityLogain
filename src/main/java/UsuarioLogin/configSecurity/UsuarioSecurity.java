@@ -30,7 +30,7 @@ public class UsuarioSecurity {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/usuario/admin").hasAuthority("ADMIN")
                         .requestMatchers("/usuario/user").hasAuthority("USER")
-                        .requestMatchers("/livre").permitAll()
+                        .requestMatchers("/usuario/livre").permitAll()
                         .anyRequest().authenticated());
         http.httpBasic(Customizer.withDefaults());
 

@@ -34,6 +34,11 @@ public class UsuarioController {
         return "Apenas usuários têm acesso a este recurso.";
     }
 
+    @GetMapping("/livre")
+    public String rotaLivre(){
+        return "<h2> Rota Livre </h2>";
+    }
+
     @PostMapping("/usuarios")
     public ResponseEntity<?> criarUsuario(@RequestBody UsuarioEntity usuario) {
         System.out.println(usuario.getUsername());
